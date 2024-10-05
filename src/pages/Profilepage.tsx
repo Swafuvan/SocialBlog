@@ -1,12 +1,11 @@
 // ProfilePage.tsx
 import { FC, useContext, useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BookOpen, Edit, MessageCircle, ThumbsUp, Users } from 'lucide-react';
+import { MessageCircle, ThumbsUp, Users } from 'lucide-react';
 import { userContext } from './Provider';
 import { AllUserBlogs } from '@/lib/routes/userRoutes';
 import moment from 'moment';
@@ -20,32 +19,6 @@ interface BlogPost {
   comments: number;
 }
 
-const recentPosts: BlogPost[] = [
-  {
-    id: '1',
-    title: 'Getting Started with React Hooks',
-    excerpt: 'Learn how to use React Hooks to manage state and side effects in your components.',
-    date: '2023-09-15',
-    likes: 42,
-    comments: 8,
-  },
-  {
-    id: '2',
-    title: 'Building Responsive Layouts with Tailwind CSS',
-    excerpt: 'Discover how to create beautiful, responsive layouts quickly using Tailwind CSS.',
-    date: '2023-09-10',
-    likes: 35,
-    comments: 5,
-  },
-  {
-    id: '3',
-    title: 'Introduction to TypeScript for JavaScript Developers',
-    excerpt: 'Learn the basics of TypeScript and how it can improve your JavaScript development workflow.',
-    date: '2023-09-05',
-    likes: 28,
-    comments: 3,
-  },
-];
 
 const ProfilePage: FC = () => {
 

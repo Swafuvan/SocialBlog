@@ -1,4 +1,4 @@
-import { Heart, MessageCircle, BookmarkPlus, Share2 } from 'lucide-react'
+import { Heart, MessageCircle } from 'lucide-react'
 
 interface BlogPost {
   id: string

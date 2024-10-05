@@ -1,9 +1,7 @@
 import { BlogData, LoginUser, SignupUser } from "@/types/type"
-import axios from 'axios'
 import axiosInstance from "./axiosInterceptor";
 // import axiosInstance from "./axiosInterceptor"
 
-const baseURL = 'http://localhost:4000';
 
 export const UserLogin = async (userDetails:LoginUser) => {
     try {

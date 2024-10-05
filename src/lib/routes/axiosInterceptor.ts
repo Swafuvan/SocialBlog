@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
 // Function to get the access token from localStorage (if stored there)
 export const getUserToken = () => {

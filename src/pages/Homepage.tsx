@@ -1,15 +1,13 @@
-import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
+import React, { useContext, useEffect,  useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { Bell, PlusCircleIcon, Home, LogOut, MessageCircle, PenSquare, Search, ThumbsUp, User } from 'lucide-react'
+import { Bell, PlusCircleIcon, Home, LogOut, MessageCircle, Search, ThumbsUp, User } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { userContext } from './Provider'
 import moment from 'moment'
-import { BlogData, } from '@/types/type'
-import { EditBlogs, FindAllBlogs, userDetailsFind } from '@/lib/routes/userRoutes'
+import { FindAllBlogs } from '@/lib/routes/userRoutes'
 import { PostEditModal } from './EditBlog'
 
 // Define BlogPost interface
@@ -24,44 +22,6 @@ interface BlogPost {
     comments: number
     timestamp: string
 }
-
-// Sample data
-const sampleBlogPosts: BlogPost[] = [
-    {
-        id: '1',
-        author: {
-            name: 'John Doe',
-            avatar: '/placeholder.svg?height=40&width=40'
-        },
-        content: 'Just finished reading an amazing book on React hooks. Highly recommend it to all front-end developers!',
-        likes: 15,
-        comments: 3,
-        timestamp: '2 hours ago'
-    },
-    {
-        id: '2',
-        author: {
-            name: 'Jane Smith',
-            avatar: '/placeholder.svg?height=40&width=40'
-        },
-        content: 'Excited to announce that I\'ll be speaking at the upcoming Web Dev Conference! Who else is attending?',
-        likes: 32,
-        comments: 7,
-        timestamp: '5 hours ago'
-    },
-    {
-        id: '3',
-        author: {
-            name: 'Alice Johnson',
-            avatar: '/placeholder.svg?height=40&width=40'
-        },
-        content: 'Just launched my new portfolio website! Check it out and let me know what you think. #WebDevelopment #Portfolio',
-        likes: 24,
-        comments: 5,
-        timestamp: '1 day ago'
-    }
-]
-
 
 const HomePage: React.FC = () => {
     const Navigate = useNavigate();
