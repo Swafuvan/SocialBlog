@@ -10,14 +10,6 @@ import { userContext } from './Provider';
 import { AllUserBlogs } from '@/lib/routes/userRoutes';
 import moment from 'moment';
 
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  likes: number;
-  comments: number;
-}
 
 
 const ProfilePage: FC = () => {

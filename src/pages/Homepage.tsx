@@ -10,18 +10,6 @@ import moment from 'moment'
 import { FindAllBlogs } from '@/lib/routes/userRoutes'
 import { PostEditModal } from './EditBlog'
 
-// Define BlogPost interface
-interface BlogPost {
-    id: string
-    author: {
-        name: string
-        avatar: string
-    }
-    content: string
-    likes: number
-    comments: number
-    timestamp: string
-}
 
 const HomePage: React.FC = () => {
     const Navigate = useNavigate();
