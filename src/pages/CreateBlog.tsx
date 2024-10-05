@@ -78,7 +78,7 @@ export default function BlogCreatePage() {
             // Upload media if available
             const uploadedMedia = await uploadMediaToS3getlink();
             blogData = { ...blogData, Data: uploadedMedia };
-            const uploadedBlog = await UploadUserBlog(blogData, user._id);
+            await UploadUserBlog(blogData, user._id);
             console.log("Blog uploaded successfully:", blogData);
             setMedia([]);
             setProgress(-1);
@@ -86,7 +86,7 @@ export default function BlogCreatePage() {
         } else {
             console.log(blogData + "enter here")
             blogData = { ...blogData, Data: [] }; // No media added
-            const uploadedBlog = await UploadUserBlog(blogData, user._id);
+            await UploadUserBlog(blogData, user._id);
             console.log("Blog uploaded successfully:", blogData);
             navigate('/');
         }
